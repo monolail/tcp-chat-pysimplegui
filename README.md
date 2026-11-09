@@ -88,12 +88,12 @@ python -m poetry install
 
 ### 2. 채팅 서버 실행
 ```bash
-python -m poetry run python server.py
+python -m poetry run python src/server.py
 ```
 
 ### 3. 채팅 클라이언트 실행 (새 터미널에서 여러 개 실행 가능)
 ```bash
-python -m poetry run python client.py
+python -m poetry run python src/client.py
 ```
 1. 실행된 GUI 창에서 **`CONNECT`** 버튼을 클릭해 서버에 접속합니다.
 2. 하단 입력창에 메시지를 입력하고 `Enter` 또는 **`SEND`** 버튼을 눌러 대화합니다.
@@ -105,11 +105,12 @@ python -m poetry run python client.py
 
 ```text
 tcp-chat-pysimplegui/
-├── server.py          # 멀티스레드 기반 TCP 브로드캐스트 채팅 서버
-├── client.py          # FreeSimpleGUI 기반 데스크톱 채팅 클라이언트
-├── protocol.py        # Length-prefixed JSON 패킷 송수신 유틸리티 모듈
+├── src/
+│   ├── server.py      # 멀티스레드 기반 TCP 브로드캐스트 채팅 서버
+│   ├── client.py      # FreeSimpleGUI 기반 데스크톱 채팅 클라이언트
+│   └── protocol.py    # Length-prefixed JSON 패킷 송수신 유틸리티 모듈
+├── screen/            # 실행 화면 스크린샷 이미지
 ├── pyproject.toml     # Poetry 프로젝트 설정 및 의존성 명세
 ├── poetry.lock        # 패키지 버전 잠금 파일
-├── screen/            # 실행 화면 스크린샷 이미지
 └── README.md          # 프로젝트 문서
 ```
